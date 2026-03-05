@@ -1,0 +1,21 @@
+name: manip variables
+
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+env:
+  TEST: "hello"
+
+jobs:
+  use_var:
+    runs-on: ubuntu-latest
+    steps:
+      - name: confirm deploy
+        run: echo "deploiement $GITHUB_REF"
+      - name: show hello
+        run: |
+          echo "variable test : $TEST"
