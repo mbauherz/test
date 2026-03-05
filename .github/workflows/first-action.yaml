@@ -1,0 +1,10 @@
+name: Show Hello
+
+on:
+  workflow_dispatch:
+jobs:
+  show_hello:
+    runs-on: windows-latest
+    steps:
+      - name: print-hello
+        run: echo "Hello"
